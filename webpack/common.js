@@ -9,7 +9,7 @@ const { esbuildLoader } = require('./loaders/esbuildLoader');
 const commonConfig = {
   target: ['web', 'browserslist'],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.wasm'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.wasm'],
     alias: {
       '@': resolve('src'),
     },
@@ -20,13 +20,25 @@ const commonConfig = {
   entry: {
     // main: resolve(__dirname, '../src/index.jsx'),
     main: {
-      import: resolve(__dirname, '../src/index.jsx'),
+      import: resolve(__dirname, '../src/index.tsx'),
       dependOn: ['vendor'],
     },
     vendor: ['react', 'react-dom'],
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            compilerOptions: {
+              noEmit: false,
+            },
+          },
+        },
+      },
       {
         // 어떤 파일을 변환할 것인가?
         test: /\.jsx?$/i,
