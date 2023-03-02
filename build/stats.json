@@ -1,8 +1,8 @@
 {
   "hash": "3b22933c8ef8f489bfe3",
   "version": "5.75.0",
-  "time": 6420,
-  "builtAt": 1677755173344,
+  "time": 7724,
+  "builtAt": 1677764611923,
   "publicPath": "auto",
   "outputPath": "C:\\Users\\kej19\\Desktop\\webpack-TS\\build",
   "assetsByChunkName": {
@@ -2658,8 +2658,8 @@
       "name": "HtmlWebpackCompiler",
       "hash": "eb18d3d94bb93b6fed70",
       "version": "5.75.0",
-      "time": 145,
-      "builtAt": 1677755167149,
+      "time": 166,
+      "builtAt": 1677764604457,
       "publicPath": "",
       "outputPath": "C:\\Users\\kej19\\Desktop\\webpack-TS\\build",
       "assetsByChunkName": {},

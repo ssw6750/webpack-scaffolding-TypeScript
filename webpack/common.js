@@ -20,6 +20,7 @@ const commonConfig = {
   entry: {
     // main: resolve(__dirname, '../src/index.jsx'),
     main: {
+      // eslint-disable-next-line no-undef
       import: resolve(__dirname, '../src/index.tsx'),
       dependOn: ['vendor'],
     },

@@ -12,11 +12,6 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
   settings: {
     react: { version: require('react/package.json').version },
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
   },
   rules: {
     '@typescript-eslint/no-var-requires': 'off',

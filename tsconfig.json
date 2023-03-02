@@ -10,6 +10,8 @@
     "baseUrl": "src",
     "typeRoots": ["node_modules/@types", "src/@types"],
 
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+
     "allowJs": true,
     "resolveJsonModule": true,
 
