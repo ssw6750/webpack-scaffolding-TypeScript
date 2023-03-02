@@ -12,6 +12,11 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
   settings: {
     react: { version: require('react/package.json').version },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
@@ -29,7 +34,6 @@ module.exports = {
         next: ['const', 'let', 'var'],
       },
     ],
-
     'import/order': [
       'warn',
       {
@@ -54,3 +58,29 @@ module.exports = {
     ],
   },
 };
+
+// module.exports = {
+//     "env": {
+//         "browser": true,
+//         "es2021": true,
+//         "node": true
+//     },
+//     "extends": [
+//         "eslint:recommended",
+//         "plugin:react/recommended",
+//         "plugin:@typescript-eslint/recommended"
+//     ],
+//     "overrides": [
+//     ],
+//     "parser": "@typescript-eslint/parser",
+//     "parserOptions": {
+//         "ecmaVersion": "latest",
+//         "sourceType": "module"
+//     },
+//     "plugins": [
+//         "react",
+//         "@typescript-eslint"
+//     ],
+//     "rules": {
+//     }
+// }
