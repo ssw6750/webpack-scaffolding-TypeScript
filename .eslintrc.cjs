@@ -1,5 +1,9 @@
 module.exports = {
-  // ...
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -8,6 +12,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
     'prettier',
+    'plugin:import/recommended',
   ],
   plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
   settings: {
