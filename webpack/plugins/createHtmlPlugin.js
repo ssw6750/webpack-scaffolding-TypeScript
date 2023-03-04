@@ -1,7 +1,6 @@
 const { resolve } = require('node:path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 const createHtmlPlugin = (options = {}) => {
   const config = Object.assign(
     {

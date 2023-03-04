@@ -20,7 +20,13 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
-
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+    'import/no-unresolved': 'off',
     'no-console': 'warn',
     'react/prop-types': 'off',
     'react/self-closing-comp': 'warn',
