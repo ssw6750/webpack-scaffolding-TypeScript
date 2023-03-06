@@ -13,10 +13,13 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier',
     'plugin:import/recommended',
+    'plugin:storybook/recommended',
   ],
   plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
   settings: {
-    react: { version: require('react/package.json').version },
+    react: {
+      version: require('react/package.json').version,
+    },
   },
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
@@ -32,8 +35,16 @@ module.exports = {
     'react/self-closing-comp': 'warn',
     'padding-line-between-statements': [
       'error',
-      { blankLine: 'always', prev: '*', next: 'return' },
-      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'return',
+      },
+      {
+        blankLine: 'always',
+        prev: ['const', 'let', 'var'],
+        next: '*',
+      },
       {
         blankLine: 'any',
         prev: ['const', 'let', 'var'],
